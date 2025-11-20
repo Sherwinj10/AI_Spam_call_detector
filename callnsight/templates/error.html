@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CallnSight - Analysis Error</title>
+    <meta name="description" content="Call Analysis Error">
+    {% load static %}
+    <link rel="stylesheet" href="{% static "error.css" %}">
+    <link rel="stylesheet" href="https://unpkg.com/lucide-static/font/lucide.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo-container">
+                <div class="logo-glow"></div>
+                <i class="lucide-shield icon-logo"></i>
+            </div>
+            <h1 class="title">Analysis Incomplete</h1>
+        </header>
+
+        <main class="result-container">
+            <div class="result-card">
+                <div class="status-badge error">
+                    <i class="lucide-alert-triangle"></i>
+                    <span>Analysis Error</span>
+                </div>
+
+                <div class="error-details">
+                    <div class="error-icon">
+                        <i class="lucide-wifi-off"></i>
+                    </div>
+                    <h2>Unable to Complete Analysis</h2>
+                    <p class="error-message">{{messafe}}</p>
+                </div>
+
+                <div class="troubleshoot-section">
+                    <h3>Possible Issues:</h3>
+                    <ul class="issue-list">
+                        <li>
+                            <i class="lucide-waves"></i>
+                            <span>Poor audio quality in recording</span>
+                        </li>
+                        <li>
+                            <i class="lucide-clock"></i>
+                            <span>Recording too short for analysis</span>
+                        </li>
+                        <li>
+                            <i class="lucide-file-warning"></i>
+                            <span>Unsupported audio format</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="action-buttons">
+                    <button class="retry-button">
+                        <i class="lucide-rotate-ccw"></i>
+                        Try Again
+                    </button>
+                    <button class="help-button">
+                        <i class="lucide-help-circle"></i>
+                        Get Help
+                    </button>
+                </div>
+            </div>
+
+            <div class="suggestion-panel">
+                <h2>Recommendations</h2>
+                <ul class="suggestion-list">
+                    <li>
+                        <i class="lucide-check-circle"></i>
+                        Ensure recording is at least 10 seconds long
+                    </li>
+                    <li>
+                        <i class="lucide-file-audio"></i>
+                        Use MP3 or WAV format for best results
+                    </li>
+                    <li>
+                        <i class="lucide-volume-2"></i>
+                        Check if audio is clear and audible
+                    </li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <button class="new-analysis">
+                <i class="lucide-refresh-ccw"></i>
+                Start New Analysis
+            </button>
+        </footer>
+    </div>
+</body>
+</html>
